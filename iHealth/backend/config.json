@@ -1,0 +1,38 @@
+{
+    "SPECIALTY_KEYWORDS" : {
+    
+        "Neurology": ["brain", "spinal cord", "nerve", "seizure", "epilepsy", "stroke", "migraine", "headache",
+                        "dizziness", "vertigo", "parkinson", "multiple sclerosis", "ms", "tremor", "neuropathy",
+                        "numbness", "tingling", "memory loss", "dementia", "alzheimer", "brain tumor", "concussion", "loss of coordination"],
+        
+        "Cardiology": ["heart", "chest pain", "heart attack", "palpitations", "arrhythmia", "irregular heartbeat",
+                        "high blood pressure", "hypertension", "low blood pressure", "fainting", "shortness of breath",
+                        "cardiac arrest", "heart failure", "blocked artery", "cholesterol", "coronary artery disease"],
+        "Orthopedics": ["bone", "fracture", "joint pain", "knee pain", "hip pain", "shoulder pain", "arthritis",
+                        "ligament tear", "acl", "meniscus", "back pain", "spine pain", "scoliosis",
+                        "disc herniation", "slipped disc", "muscle injury", "tendon injury"],
+        "Gastroenterology": ["stomach pain", "abdominal pain", "digestion", "bloating", "acid reflux", "gerd", "ulcer",
+                            "liver disease", "hepatitis", "pancreas", "pancreatitis", "colon pain", "ibs",
+                            "crohns disease", "diarrhea", "constipation", "blood in stool"],
+        "Dermatology": ["skin rash", "acne", "eczema", "psoriasis", "itching", "skin infection", "skin allergy",
+                        "dry skin", "mole", "skin cancer", "pigmentation", "hair loss", "dandruff", "nail infection"],
+        "Endocrinology": ["diabetes", "thyroid", "hormone imbalance", "metabolism", "insulin", "blood sugar",
+                            "hyperthyroidism", "hypothyroidism", "adrenal gland", "pituitary gland",
+                            "weight gain", "weight loss", "pcos"],
+        "Psychiatry": ["depression", "anxiety", "panic attack", "mental health", "bipolar disorder", "schizophrenia",
+                        "mood disorder", "insomnia", "stress", "suicidal thoughts", "ptsd", "hallucinations", "addiction"],
+        "Pediatrics": ["child illness", "infant fever", "child infection", "baby rash", "child cough",
+                        "development delay", "vaccination", "pediatric fever", "newborn issues", "growth problems"],
+        "Oncology": ["cancer", "tumor", "malignant", "chemotherapy", "radiation therapy", "biopsy",
+                        "leukemia", "lymphoma", "metastasis", "cancer screening"],
+        "Obstetrics & Gynecology": ["pregnancy", "menstrual pain", "period problems", "pcos", "fertility", "ovarian cyst",
+                                    "uterus pain", "vaginal bleeding", "endometriosis", "pregnancy complications", "prenatal care"],
+        "Internal Medicine": ["fatigue", "fever", "chronic illness", "infection", "general weakness", "body pain",
+                            "unknown symptoms", "multi organ disease"],
+        "Emergency Medicine": ["severe injury", "trauma", "accident", "bleeding", "unconscious", "severe pain",
+                                "burn", "poisoning", "stroke symptoms", "heart attack symptoms"],
+        "Family Medicine": ["general checkup", "cold", "flu", "fever", "cough", "headache", "routine screening",
+                                "preventive care", "vaccination", "minor illness"],
+        "Urgent Care": ["minor injury", "sprain", "cuts", "infection", "fever", "flu", "ear infection", "minor fracture"]}
+
+}

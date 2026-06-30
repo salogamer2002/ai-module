@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "AI-Chatbot API — iHealth & Wellness Foundation",
+    "description": "Complete API collection for the AI-Chatbot module (ARIA Voice Agent)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3001/api/v1/chatbot" }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Send Message (Non-Streaming)",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/message",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"message\": \"hello\" }"
+        }
+      }
+    },
+    {
+      "name": "Stream Chat (SSE)",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/stream",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"messages\": [{ \"role\": \"user\", \"content\": \"Find a cardiologist for chest pain\" }] }"
+        }
+      }
+    },
+    {
+      "name": "Chat (Non-Streaming Fallback)",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/chat",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"messages\": [{ \"role\": \"user\", \"content\": \"What is iHealth Foundation?\" }] }"
+        }
+      }
+    },
+    {
+      "name": "TTS (Auto-Fallback)",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/tts",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"text\": \"Hello, how can I help you today?\" }"
+        }
+      }
+    },
+    {
+      "name": "TTS Cartesia (Direct)",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/tts/cartesia",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"text\": \"Welcome to iHealth Foundation.\" }"
+        }
+      }
+    },
+    {
+      "name": "Create Session",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/session",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"userId\": \"user123\", \"title\": \"Health Query\" }"
+        }
+      }
+    },
+    {
+      "name": "Get User Sessions",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/sessions?userId=user123"
+      }
+    },
+    {
+      "name": "Get Session Messages",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/messages/SESSION_ID_HERE"
+      }
+    },
+    {
+      "name": "Delete Session",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/session/SESSION_ID_HERE"
+      }
+    },
+    {
+      "name": "Submit Feedback",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/feedback",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"messageId\": \"msg-uuid\", \"rating\": 5, \"comment\": \"Very helpful!\" }"
+        }
+      }
+    }
+  ]
+}

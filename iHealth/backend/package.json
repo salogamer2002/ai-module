@@ -1,0 +1,29 @@
+{
+  "name": "ihealthwellness-chatbot",
+  "version": "2.0.0",
+  "description": "iHealthwellness AI Chatbot — Production Node.js Backend (Ai-Chatbot Module)",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "dev": "node index.js",
+    "health": "curl -s http://localhost:3001/api/v1/chatbot/health | node -e \"process.stdin.on('data',d=>console.log(JSON.parse(d)))\"",
+    "test:greeting": "curl -s -X POST http://localhost:3001/api/v1/chatbot/message -H 'Content-Type: application/json' -d '{\"message\":\"hello\"}' | node -e \"process.stdin.on('data',d=>console.log(JSON.parse(d)))\"",
+    "test:doctor": "curl -s -X POST http://localhost:3001/api/v1/chatbot/message -H 'Content-Type: application/json' -d '{\"message\":\"find a cardiologist for chest pain\"}' | node -e \"process.stdin.on('data',d=>console.log(JSON.parse(d)))\"",
+    "test:rag": "curl -s -X POST http://localhost:3001/api/v1/chatbot/message -H 'Content-Type: application/json' -d '{\"message\":\"what is the chatbot architecture\"}' | node -e \"process.stdin.on('data',d=>console.log(JSON.parse(d)))\""
+  },
+  "dependencies": {
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.0.0",
+    "mammoth": "^1.12.0",
+    "node-fetch": "^2.7.0",
+    "openai": "^4.78.1",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

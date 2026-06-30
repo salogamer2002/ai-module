@@ -1,0 +1,17 @@
+{
+  "name": "ihealthwellness-chatbot",
+  "version": "1.0.0",
+  "description": "iHealthwellness Public Health Chatbot — Full Stack (Node.js Backend + React Frontend)",
+  "private": true,
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "dev": "echo '⚡ Start backend and frontend in separate terminals:\\n  Terminal 1: npm run dev:backend\\n  Terminal 2: npm run dev:frontend'",
+    "health": "curl -s http://localhost:3001/api/health | node -e \"process.stdin.on('data',d=>console.log(JSON.parse(d)))\""
+  }
+}
